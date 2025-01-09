@@ -30,6 +30,10 @@ body {
   font-family: "Bubblewump";
 }
 
+.date-container {
+  text-align: center;
+}
+
 .date {
   color: var(--color-light);
   letter-spacing: 4px;
@@ -51,6 +55,7 @@ body {
 .footer a {
   color: var(--color-black);
   text-decoration: none;
+  text-shadow: 0px 0px 1px 1px var(--color-black);
 }
 .footer a:hover {
   color: var(--color-light);
@@ -259,8 +264,43 @@ body {
   }
 }
 
+@media screen and (width <= 640px) {
+  .rotor {
+    font-size: 2.5rem;
+    width: 30px;
+    height: 75px;
+  }
+
+  .rotor .rotor-num {
+    font-size: 7.5rem;
+  }
+
+  .rotor-leaf {
+    font-size: 7.5rem;
+  }
+
+  .rotor .rotor-bottom span {
+    transform: translateY(calc(-30% + 3px));
+  }
+
+  .rotor .rotor-top span {
+    transform: translateY(31%);
+  }
+
+  .rotor .rotor-top.flip span {
+    transform: translateY(30.5%) translateX(-0.5px);
+  }
+
+  .rotor .rotor-top.flip span.flip-num {
+    transform: translateY(30.5%) translateX(0.1px) rotateX(187deg) !important;
+  }
+}
+
 @media screen and (width <= 450px) {
   .nums-container {
     gap: 0.5rem;
+  }
+  .clock-container {
+    gap: 2rem;
   }
 }
